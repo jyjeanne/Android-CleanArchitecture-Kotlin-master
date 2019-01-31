@@ -78,8 +78,10 @@ dependencies {
 
   //Application dependencies
   implementation applicationDependencies.kotlin
-  implementation applicationDependencies.kotlinCoroutines
-  implementation applicationDependencies.kotlinCoroutinesAndroid
+  //implementation applicationDependencies.kotlinCoroutines
+  //implementation applicationDependencies.kotlinCoroutinesAndroid
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0'
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0"
   implementation applicationDependencies.appCompat
   implementation applicationDependencies.constraintLayout
   implementation applicationDependencies.archComponents
@@ -113,8 +115,3 @@ dependencies {
   testImplementation developmentDependencies.leakCanaryNoop
 }
 
-kotlin {
-  experimental {
-    coroutines "enable"
-  }
-}
